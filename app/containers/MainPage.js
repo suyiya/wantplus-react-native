@@ -8,11 +8,10 @@ import React, { Component, TouchableOpacity } from 'react';
 import { View, StyleSheet, Navigator, Image, Text, TextInput } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 
-const HOME_TAB = 'homeTab';
-const STRATEGY_TAB = 'strategyTab';
-const SIMULATE_TAB = 'simulateTab';
-const NEWS_TAB = 'newsTab';
-const ME_TAB = 'meTab';
+import Home from './Home';
+import Shop from './Shop';
+import Feature from './Feature';
+import Me from './Me';
 
 export  default class TabBar extends  Component {
     constructor(props, context) {
@@ -43,47 +42,37 @@ export  default class TabBar extends  Component {
                     renderIcon={() => <Image source={require('../images/tabbar/tab_home.png')} />}
                     renderSelectedIcon={() => <Image source={require('../images/tabbar/tab_home_select.png')} />}
                     onPress={() => this.setState({ selectedTab: 'home' })}>
-                    <View style={{flex: 1, backgroundColor: 'yellow'}}></View>
+                    <Home />
                 </TabNavigator.Item>
                 <TabNavigator.Item
-                    selected={this.state.selectedTab === 'strategy'}
-                    title="策略"
+                    selected={this.state.selectedTab === 'shop'}
+                    title="商店"
                     titleStyle={{color:'grey'}}
                     selectedTitleStyle={{color:'red'}}
                     renderIcon={() => <Image source={require('../images/tabbar/tab_strategy.png')} />}
                     renderSelectedIcon={() => <Image source={require('../images/tabbar/tab_strategy_select.png')} />}
-                    onPress={() => this.setState({ selectedTab: 'strategy' })}>
-                    <View style={{flex: 1, backgroundColor: 'red'}}></View>
+                    onPress={() => this.setState({ selectedTab: 'shop' })}>
+                    <Shop />
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'simulate'}
-                    title="仿真交易"
+                    title="特色"
                     titleStyle={{color:'grey'}}
                     selectedTitleStyle={{color:'red'}}
                     renderIcon={() => <Image source={require('../images/tabbar/tab_simulate.png')} />}
                     renderSelectedIcon={() => <Image source={require('../images/tabbar/tab_simulate_select.png')} />}
                     onPress={() => this.setState({ selectedTab: 'simulate' })}>
-                    <View style={{flex: 1, backgroundColor: 'green'}}></View>
-                </TabNavigator.Item>
-                <TabNavigator.Item
-                    selected={this.state.selectedTab === 'news'}
-                    title="新闻"
-                    titleStyle={{color:'grey'}}
-                    selectedTitleStyle={{color:'red'}}
-                    renderIcon={() => <Image source={require('../images/tabbar/tab_news.png')} />}
-                    renderSelectedIcon={() => <Image source={require('../images/tabbar/tab_news_select.png')} />}
-                    onPress={() => this.setState({ selectedTab: 'news' })}>
-                    <View style={{flex: 1, backgroundColor: 'blue'}}></View>
+                    <Feature />
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'me'}
                     title="我"
                     titleStyle={{color:'grey'}}
                     selectedTitleStyle={{color:'red'}}
-                    renderIcon={() => <Image source={require('../images/tabbar/tab_me.png')} />}
-                    renderSelectedIcon={() => <Image source={require('../images/tabbar/tab_me_select.png')} />}
+                    renderIcon={() => <Image source={require('../images/tabbar/tab_news.png')} />}
+                    renderSelectedIcon={() => <Image source={require('../images/tabbar/tab_news_select.png')} />}
                     onPress={() => this.setState({ selectedTab: 'me' })}>
-                    <View style={{flex: 1, backgroundColor: 'orange'}}></View>
+                    <Me />
                 </TabNavigator.Item>
             </TabNavigator>
         );
