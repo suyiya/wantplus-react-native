@@ -15,7 +15,9 @@ var utils = {
     /**
      * 客户端窗口高度
      */
-    height: Dimensions.get('window').height
+    height: Dimensions.get('window').height,
+
+    mainColor: '#2fdab8'
 };
 
 module.exports = utils;

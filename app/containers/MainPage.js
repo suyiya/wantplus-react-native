@@ -36,7 +36,7 @@ export  default class TabBar extends  Component {
             <TabNavigator tabBarStyle={tabBarStyle} sceneStyle={sceneStyle}>
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'home'}
-                    title="首页"
+                    //title="首页"
                     titleStyle={{color:'grey'}}
                     selectedTitleStyle={{color:'red'}}
                     renderIcon={() => <Image source={require('../images/tabbar/tab_home.png')} />}
@@ -46,7 +46,7 @@ export  default class TabBar extends  Component {
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'shop'}
-                    title="商店"
+                    //title="商店"
                     titleStyle={{color:'grey'}}
                     selectedTitleStyle={{color:'red'}}
                     renderIcon={() => <Image source={require('../images/tabbar/tab_strategy.png')} />}
@@ -56,7 +56,7 @@ export  default class TabBar extends  Component {
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'simulate'}
-                    title="特色"
+                    //title="特色"
                     titleStyle={{color:'grey'}}
                     selectedTitleStyle={{color:'red'}}
                     renderIcon={() => <Image source={require('../images/tabbar/tab_simulate.png')} />}
@@ -66,7 +66,7 @@ export  default class TabBar extends  Component {
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'me'}
-                    title="我"
+                    //title="我"
                     titleStyle={{color:'grey'}}
                     selectedTitleStyle={{color:'red'}}
                     renderIcon={() => <Image source={require('../images/tabbar/tab_news.png')} />}
